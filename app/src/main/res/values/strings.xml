@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ram Keripik</string>
+    <string name="my_project">My Project</string>
+
+    <string name="snack_detail_title">Keripik Singkong</string>
+    <string name="snack_description">Keripik singkong adalah camilan tradisional Indonesia yang dibuat dari irisan tipis umbi singkong yang digoreng hingga renyah. Camilan ini digemari karena rasanya yang gurih, teksturnya yang renyah, serta hadir dalam berbagai varian rasa seperti original, pedas, dan balado.</string>
+
+    <string name="nutrition_table_title">Komposisi Gizi per 100 g</string>
+    <string name="nutrition_column_component">Komponen</string>
+    <string name="nutrition_column_value">Jumlah</string>
+
+    <string name="nutrition_energy_label">Energi</string>
+    <string name="nutrition_energy_value">509 kkal</string>
+    <string name="nutrition_fat_label">Lemak Total</string>
+    <string name="nutrition_fat_value">30 g</string>
+    <string name="nutrition_carb_label">Karbohidrat</string>
+    <string name="nutrition_carb_value">57 g</string>
+    <string name="nutrition_protein_label">Protein</string>
+    <string name="nutrition_protein_value">2 g</string>
+    <string name="nutrition_fiber_label">Serat</string>
+    <string name="nutrition_fiber_value">3 g</string>
+    <string name="nutrition_sodium_label">Natrium</string>
+    <string name="nutrition_sodium_value">380 mg</string>
+</resources>

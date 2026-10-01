@@ -1,0 +1,14 @@
+ ▐▛███▛█   Claude Code v2.1.281
+▝▜██████▀  Opus 5.5 · Claude Pro
+  ▝▝ ▝▝    D:\android-ramos\ram-keripik
+
+  Get to finished work sooner with Opus 5.5. Update Claude Code to try it.
+
+❯ /resume                                                                       
+  ⎿  This conversation is from a different directory.
+
+     To resume, run:
+       cd 'C:\Users\LOQ\AndroidStudioProjects\androidapps' ; claude --resume
+     0a969e52-bd7b-4a87-9e6d-3309865b534f
+
+     (Command copied to clipboard)
