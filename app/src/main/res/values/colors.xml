@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Warna latihan snack (SnackHomeActivity & SnackDetailActivity) -->
     <color name="primary">#6D4C41</color>
     <color name="primary_dark">#4E342E</color>
     <color name="accent">#FFA000</color>
@@ -16,5 +17,18 @@
     <color name="table_border">#D7CCC8</color>
     <color name="image_placeholder_tint">#D7CCC8</color>
 
+    <!-- Palet SISTRA-SAWIT (grand design) -->
+    <color name="sistra_green">#0EBE7F</color>
+    <color name="sistra_green_dark">#08A56C</color>
+    <color name="sistra_green_light">#E6F8F1</color>
+    <color name="sistra_text">#333333</color>
+    <color name="sistra_text_gray">#677294</color>
+    <color name="sistra_orange">#FE7F44</color>
+    <color name="sistra_red">#FF484C</color>
+    <color name="sistra_blue">#2753F3</color>
+    <color name="sistra_cyan">#2EC4F1</color>
+    <color name="sistra_icon_inactive">#9AA3BC</color>
+    <color name="sistra_border">#EDEDED</color>
+    <color name="sistra_bg">#FFFFFF</color>
     <color name="white">#FFFFFF</color>
 </resources>

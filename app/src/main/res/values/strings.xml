@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Ram Keripik</string>
+    <string name="app_name">SISTRA-SAWIT</string>
+
+    <!-- Umum SISTRA -->
+    <string name="logo_teks">SISTRA</string>
+    <string name="logo_titik">.</string>
+    <string name="logo_tagline">SAWIT · TRANSPARANSI PANEN</string>
+    <string name="logo_deskripsi">Logo SISTRA-SAWIT</string>
+    <string name="fitur_segera_hadir">Fitur segera hadir</string>
+    <string name="kembali">Kembali</string>
+
+    <!-- 01 Login -->
+    <string name="login_judul">Selamat datang</string>
+    <string name="login_deskripsi">Masuk untuk mencatat panen, menyimpan nota jual, dan melihat harga TBS Disbun Riau.</string>
+    <string name="login_hint_email">Email</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_tombol_masuk">Masuk</string>
+    <string name="login_lupa_password">Lupa password</string>
+    <string name="login_ke_daftar">Belum punya akun? Daftar</string>
+    <string name="login_wajib_diisi">Email dan password wajib diisi</string>
+    <string name="login_salah">Email atau password salah</string>
+    <!-- Akun demo statis (belum ada database) -->
+    <string name="login_demo_email" translatable="false">darwin@sistra.id</string>
+    <string name="login_demo_password" translatable="false">sawit123</string>
+
+    <!-- 02 Daftar Akun -->
+    <string name="daftar_judul">Daftar Akun</string>
+    <string name="daftar_hint_nama">Nama lengkap</string>
+    <string name="daftar_hint_email">Email</string>
+    <string name="daftar_hint_no_hp">Nomor HP</string>
+    <string name="daftar_hint_password">Password</string>
+    <string name="daftar_tombol_daftar">Daftar</string>
+    <string name="daftar_berhasil">Akun berhasil dibuat</string>
+
+    <!-- 03 Beranda (Dashboard) -->
+    <string name="dashboard_sapaan">Halo, Pak Darwin!</string>
+    <string name="dashboard_judul">Catat Panenmu Hari Ini</string>
+    <string name="dashboard_inisial">DS</string>
+    <string name="dashboard_menu_catat_panen">Catat Panen</string>
+    <string name="dashboard_menu_riwayat">Riwayat</string>
+    <string name="dashboard_menu_kebun">Kebun</string>
+    <string name="dashboard_menu_rekap">Rekap</string>
+    <string name="dashboard_harga_judul">Harga TBS Minggu Ini</string>
+    <string name="dashboard_lihat_semua">Lihat semua ›</string>
+    <string name="dashboard_kebun1_label">Kebun 1 · umur 12 th</string>
+    <string name="dashboard_kebun1_harga">Rp3.891,28</string>
+    <string name="dashboard_kebun2_label">Kebun 2 · umur 8 th</string>
+    <string name="dashboard_kebun2_harga">Rp3.907,82</string>
+    <string name="dashboard_satuan_harga">per kg · plasma</string>
+    <string name="dashboard_periode_harga">Disbun Riau · periode 30 Sep – 6 Okt 2026</string>
+    <string name="dashboard_tombol_web">Situs Disbun Riau</string>
+
+    <!-- 07 Harga TBS -->
+    <string name="harga_judul">Harga TBS Riau</string>
+    <string name="harga_plasma">Plasma</string>
+    <string name="harga_plasma_sub">pekebun mitra</string>
+    <string name="harga_swadaya">Swadaya</string>
+    <string name="harga_swadaya_sub">pekebun mandiri</string>
+    <string name="harga_periode">Periode 30 Sep – 6 Okt 2026</string>
+    <string name="harga_perubahan">Turun Rp36,41/kg dari minggu lalu (umur 9 th)</string>
+    <string name="harga_kolom_umur">Umur tanaman</string>
+    <string name="harga_kolom_harga">Harga (Rp/kg)</string>
+    <string name="harga_tag_kebun1">Kebun 1</string>
+    <string name="harga_tag_kebun2">Kebun 2</string>
+    <string name="harga_umur_3">3 th</string>
+    <string name="harga_nilai_3">3.013,79</string>
+    <string name="harga_umur_4">4 th</string>
+    <string name="harga_nilai_4">3.417,66</string>
+    <string name="harga_umur_5">5 th</string>
+    <string name="harga_nilai_5">3.622,60</string>
+    <string name="harga_umur_6">6 th</string>
+    <string name="harga_nilai_6">3.780,67</string>
+    <string name="harga_umur_7">7 th</string>
+    <string name="harga_nilai_7">3.862,13</string>
+    <string name="harga_umur_8">8 th</string>
+    <string name="harga_nilai_8">3.907,82</string>
+    <string name="harga_umur_9">9 th</string>
+    <string name="harga_nilai_9">3.912,29</string>
+    <string name="harga_umur_10_20">10–20 th</string>
+    <string name="harga_nilai_10_20">3.891,28</string>
+    <string name="harga_umur_21">21 th</string>
+    <string name="harga_nilai_21">3.830,03</string>
+    <string name="harga_sumber">Sumber: penetapan harga TBS Disbun Riau.</string>
+
+    <!-- Web Disbun -->
+    <string name="web_disbun_judul">Disbun Riau</string>
+    <string name="url_disbun">https://disbun.riau.go.id</string>
+
+    <!-- Latihan snack (SnackHomeActivity & SnackDetailActivity) -->
+    <string name="snack_app_name">Ram Keripik</string>
     <string name="my_project">My Project</string>
 
     <string name="snack_detail_title">Keripik Singkong</string>

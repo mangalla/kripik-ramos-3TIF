@@ -3,15 +3,15 @@ package com.example.ramkeripik
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.ramkeripik.databinding.ActivityMainBinding
+import com.example.ramkeripik.databinding.ActivitySnackHomeBinding
 
-class MainActivity : AppCompatActivity() {
+class SnackHomeActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivitySnackHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivitySnackHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.btnMyProject.setOnClickListener {

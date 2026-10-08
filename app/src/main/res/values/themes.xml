@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Tema latihan snack (tidak diubah) -->
     <style name="Theme.Ramkeripik" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>
+    </style>
+
+    <!-- Tema SISTRA-SAWIT: NoActionBar agar setSupportActionBar(binding.toolbar) tidak crash -->
+    <style name="Theme.Sistra" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/sistra_green</item>
+        <item name="colorPrimaryVariant">@color/sistra_green_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/sistra_orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">@color/sistra_green_dark</item>
+        <item name="android:windowBackground">@color/sistra_bg</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <!-- Gaya judul Toolbar: putih, Rubik Medium 18sp -->
+    <style name="TextAppearance.Sistra.ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+        <item name="android:textSize">18sp</item>
     </style>
 </resources>
