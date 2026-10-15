@@ -384,6 +384,50 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvPeriodeHarga" />
 
+            <!-- ===== Tombol ke Profil Developer ===== -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfilDeveloper"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/rubik_medium"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/dashboard_tombol_profil"
+                android:textAllCaps="false"
+                android:textColor="@color/sistra_green"
+                android:textSize="16sp"
+                app:cornerRadius="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnWebDisbun"
+                app:strokeColor="@color/sistra_green" />
+
+            <!-- ===== Tombol Keluar (hapus sesi login) ===== -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKeluar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/rubik_medium"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/dashboard_tombol_keluar"
+                android:textAllCaps="false"
+                android:textColor="@color/sistra_red"
+                android:textSize="16sp"
+                app:cornerRadius="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnProfilDeveloper"
+                app:strokeColor="@color/sistra_red" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -26,4 +26,20 @@
         <item name="android:fontFamily">@font/rubik_medium</item>
         <item name="android:textSize">18sp</item>
     </style>
+    <!-- Gaya teks halaman Profil Developer -->
+    <style name="Sistra.ProfilJudulKartu" parent="">
+        <item name="android:fontFamily">@font/rubik_semibold</item>
+        <item name="android:textColor">@color/sistra_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="Sistra.ProfilLabel" parent="">
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textColor">@color/sistra_text_gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Sistra.ProfilNilai" parent="">
+        <item name="android:fontFamily">@font/rubik_medium</item>
+        <item name="android:textColor">@color/sistra_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>

@@ -6,10 +6,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ramkeripik.R
 import com.example.ramkeripik.dashboard.DashboardActivity
+import com.example.ramkeripik.data.SessionManager
 import com.example.ramkeripik.databinding.ActivityLoginBinding
 import com.google.android.material.snackbar.Snackbar
 
-// Halaman Awal (01 Login): tanpa Toolbar back, menjadi LAUNCHER di manifest
+// 01 Login: dibuka SplashActivity bila belum login; sukses -> simpan sesi -> Dashboard
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
@@ -34,6 +35,9 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, R.string.login_salah, Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
+            // Autentikasi berhasil -> simpan isLogin = true di SharedPreferences
+            SessionManager(this).simpanLogin(email)
 
             startActivity(Intent(this, DashboardActivity::class.java))
             // finish() agar tombol back di Dashboard tidak kembali ke Login

@@ -87,6 +87,55 @@
     <string name="web_disbun_judul">Disbun Riau</string>
     <string name="url_disbun">https://disbun.riau.go.id</string>
 
+    <!-- Splash -->
+    <string name="splash_versi" translatable="false">SISTRA-SAWIT v1.0</string>
+
+    <!-- Tombol tambahan di Dashboard -->
+    <string name="dashboard_tombol_profil">Profil Developer</string>
+    <string name="dashboard_tombol_keluar">Keluar</string>
+
+    <!-- 08 Profil Developer -->
+    <string name="profil_judul">Profil Developer</string>
+    <string name="profil_inisial" translatable="false">RH</string>
+    <string name="profil_peran">Mahasiswa D4 Teknik Informatika · Developer SISTRA-SAWIT</string>
+    <string name="profil_kartu_biodata">Biodata</string>
+    <string name="profil_label_nama">Nama lengkap</string>
+    <string name="profil_nama" translatable="false">Ramos Hutahaean</string>
+    <string name="profil_label_prodi">Program studi</string>
+    <string name="profil_prodi">D4 Teknik Informatika</string>
+    <string name="profil_label_kampus">Kampus</string>
+    <string name="profil_kampus">Politeknik Caltex Riau (PCR), Pekanbaru</string>
+    <string name="profil_label_kelas">Kelas</string>
+    <string name="profil_kelas" translatable="false">3 TI F</string>
+    <string name="profil_label_nim">NIM</string>
+    <string name="profil_nim" translatable="false">2455301235</string>
+    <string name="profil_label_domisili">Domisili</string>
+    <string name="profil_domisili">Kandis, Siak, Riau</string>
+
+    <string name="profil_kartu_sosmed">Kontak &amp; Sosial Media</string>
+    <string name="profil_label_email">Email (ketuk untuk menulis surel)</string>
+    <string name="profil_email" translatable="false">hutahaeanramos@gmail.com</string>
+    <string name="profil_label_instagram">Instagram</string>
+    <!-- TODO: ganti dengan username asli -->
+    <string name="profil_instagram" translatable="false">@mangallasick</string>
+    <string name="profil_label_github">GitHub</string>
+    <!-- TODO: ganti dengan username asli -->
+    <string name="profil_github" translatable="false">github.com/mangalla</string>
+    <string name="profil_label_linkedin">LinkedIn</string>
+    <!-- TODO: ganti dengan username asli -->
+    <string name="profil_linkedin" translatable="false">linkedin.com/in/isi_username_linkedin</string>
+
+    <string name="profil_kartu_hobi">Hobi</string>
+    <string name="profil_hobi_blender">Animasi 3D (Blender)</string>
+    <string name="profil_hobi_sepeda">Bersepeda</string>
+    <string name="profil_hobi_catur">Catur</string>
+    <string name="profil_hobi_gaming">Gaming</string>
+    <string name="profil_hobi_gamedev">Game development</string>
+
+    <string name="profil_kartu_kekuatan">Kekuatan Terbesar</string>
+    <string name="profil_kekuatan_judul">Mengubah masalah lapangan menjadi aplikasi</string>
+    <string name="profil_kekuatan_isi">Terbiasa membawa kebutuhan nyata di sekitar, terutama sektor sawit di Riau, menjadi produk yang bisa dipakai: aplikasi web, aplikasi mobile, sampai animasi 3D.</string>
+
     <!-- Latihan snack (SnackHomeActivity & SnackDetailActivity) -->
     <string name="snack_app_name">Ram Keripik</string>
     <string name="my_project">My Project</string>

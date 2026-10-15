@@ -4,8 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ramkeripik.R
+import com.example.ramkeripik.auth.LoginActivity
+import com.example.ramkeripik.data.SessionManager
 import com.example.ramkeripik.databinding.ActivityDashboardBinding
 import com.example.ramkeripik.harga.HargaTbsActivity
+import com.example.ramkeripik.profil.ProfilDeveloperActivity
 import com.example.ramkeripik.web.WebDisbunActivity
 import com.google.android.material.snackbar.Snackbar
 
@@ -32,6 +35,20 @@ class DashboardActivity : AppCompatActivity() {
         binding.btnWebDisbun.setOnClickListener {
             startActivity(Intent(this, WebDisbunActivity::class.java))
         }
+
+        binding.btnProfilDeveloper.setOnClickListener {
+            startActivity(Intent(this, ProfilDeveloperActivity::class.java))
+        }
+
+        binding.btnKeluar.setOnClickListener { keluar() }
+    }
+
+    // Hapus sesi di SharedPreferences, lalu kembali ke Login dengan back stack bersih
+    private fun keluar() {
+        SessionManager(this).logout()
+        val intent = Intent(this, LoginActivity::class.java)
+            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        startActivity(intent)
     }
 
     private fun tampilkanSegeraHadir() {

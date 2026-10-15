@@ -15,15 +15,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sistra">
 
-        <!-- 01 Login = HALAMAN AWAL -->
+        <!-- 00 Splash = HALAMAN AWAL (LAUNCHER) -->
         <activity
-            android:name=".auth.LoginActivity"
+            android:name=".splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 01 Login: dibuka dari Splash (belum login) -->
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
 
         <activity
             android:name=".auth.DaftarAkunActivity"
@@ -39,6 +44,10 @@
 
         <activity
             android:name=".web.WebDisbunActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".profil.ProfilDeveloperActivity"
             android:exported="false" />
 
         <!-- Latihan snack (tidak diubah, tetap memakai tema lama) -->
