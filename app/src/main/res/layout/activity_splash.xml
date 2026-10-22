@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sistra_bg"
+    android:fitsSystemWindows="true"
+    app:statusBarBackground="@color/sistra_green_dark"
+    tools:context=".splash.SplashActivity">
+
+    <!-- Logo + nama + tagline di tengah layar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:contentDescription="@string/logo_deskripsi"
+            android:src="@drawable/logo_sistra" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvJudulApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_semibold"
+                android:text="@string/logo_teks"
+                android:textColor="@color/sistra_text"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/tvTitikApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_semibold"
+                android:text="@string/logo_titik"
+                android:textColor="@color/sistra_orange"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/rubik_medium"
+            android:letterSpacing="0.2"
+            android:text="@string/logo_tagline"
+            android:textColor="@color/sistra_green"
+            android:textSize="12sp" />
+
+        <ProgressBar
+            android:id="@+id/progressSplash"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="40dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/sistra_green" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvVersi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/splash_versi"
+        android:textColor="@color/sistra_text_gray"
+        android:textSize="12sp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
