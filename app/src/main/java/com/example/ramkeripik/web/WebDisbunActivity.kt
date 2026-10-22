@@ -30,6 +30,12 @@ class WebDisbunActivity : AppCompatActivity() {
         // WebViewClient agar link dibuka di dalam aplikasi, bukan di browser
         binding.webView.webViewClient = WebViewClient()
         binding.webView.settings.javaScriptEnabled = true
+        // Banyak situs modern menyimpan data di localStorage;
+        // tanpa DOM storage halaman bisa gagal dirender dan WebView tampil putih kosong
+        binding.webView.settings.domStorageEnabled = true
+        // Tampilkan halaman pas selebar layar seperti di browser
+        binding.webView.settings.loadWithOverviewMode = true
+        binding.webView.settings.useWideViewPort = true
         binding.webView.loadUrl(getString(R.string.url_disbun))
 
         // WebView bukan nested-scrolling child, jadi appBar disembunyikan/ditampilkan manual
