@@ -43,6 +43,11 @@
             android:name=".harga.HargaTbsActivity"
             android:exported="false" />
 
+        <!-- Activity utama setelah login: Bottom Navigation + Fragment (Pertemuan 7) -->
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+
         <activity
             android:name=".web.WebDisbunActivity"
             android:exported="false" />

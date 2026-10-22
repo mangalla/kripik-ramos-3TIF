@@ -33,6 +33,11 @@
     <string name="daftar_tombol_daftar">Daftar</string>
     <string name="daftar_berhasil">Akun berhasil dibuat</string>
 
+    <!-- Bottom Navigation (Pertemuan 7) -->
+    <string name="nav_beranda">Beranda</string>
+    <string name="nav_harga">Harga</string>
+    <string name="nav_akun">Akun</string>
+
     <!-- Tab Akun -->
     <string name="akun_judul">Akun</string>
     <string name="akun_nama">Pak Darwin</string>
@@ -43,6 +48,7 @@
     <string name="akun_kebun">2 kebun · umur 12 th dan 8 th</string>
 
     <!-- 03 Beranda (Dashboard) -->
+    <string name="beranda_judul">Beranda</string>
     <string name="dashboard_sapaan">Halo, Pak Darwin!</string>
     <string name="dashboard_judul">Catat Panenmu Hari Ini</string>
     <string name="dashboard_inisial">DS</string>

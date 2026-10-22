@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menu Bottom Navigation di BaseActivity (Pertemuan 7) -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/beranda"
+        android:icon="@drawable/ic_beranda"
+        android:title="@string/nav_beranda" />
+
+    <item
+        android:id="@+id/harga"
+        android:icon="@drawable/ic_harga"
+        android:title="@string/nav_harga" />
+
+    <item
+        android:id="@+id/akun"
+        android:icon="@drawable/ic_akun"
+        android:title="@string/nav_akun" />
+</menu>

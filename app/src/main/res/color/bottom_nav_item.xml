@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Warna ikon & label Bottom Navigation: hijau saat aktif, abu-abu saat tidak aktif -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/sistra_green" android:state_checked="true" />
+    <item android:color="@color/sistra_icon_inactive" />
+</selector>
