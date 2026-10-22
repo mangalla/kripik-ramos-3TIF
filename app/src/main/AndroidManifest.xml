@@ -35,14 +35,6 @@
             android:name=".auth.DaftarAkunActivity"
             android:exported="false" />
 
-        <activity
-            android:name=".dashboard.DashboardActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".harga.HargaTbsActivity"
-            android:exported="false" />
-
         <!-- Activity utama setelah login: Bottom Navigation + Fragment (Pertemuan 7) -->
         <activity
             android:name=".BaseActivity"

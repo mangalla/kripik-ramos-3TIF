@@ -4,13 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ramkeripik.BaseActivity
 import com.example.ramkeripik.R
-import com.example.ramkeripik.dashboard.DashboardActivity
 import com.example.ramkeripik.data.SessionManager
 import com.example.ramkeripik.databinding.ActivityLoginBinding
 import com.google.android.material.snackbar.Snackbar
 
-// 01 Login: dibuka SplashActivity bila belum login; sukses -> simpan sesi -> Dashboard
+// 01 Login: dibuka SplashActivity bila belum login; sukses -> simpan sesi -> BaseActivity
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
@@ -39,8 +39,8 @@ class LoginActivity : AppCompatActivity() {
             // Autentikasi berhasil -> simpan isLogin = true di SharedPreferences
             SessionManager(this).simpanLogin(email)
 
-            startActivity(Intent(this, DashboardActivity::class.java))
-            // finish() agar tombol back di Dashboard tidak kembali ke Login
+            startActivity(Intent(this, BaseActivity::class.java))
+            // finish() agar tombol back di BaseActivity tidak kembali ke Login
             finish()
         }
 

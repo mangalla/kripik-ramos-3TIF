@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.ramkeripik.R
 import com.example.ramkeripik.databinding.ActivityProfilDeveloperBinding
 
-// 08 Profil Developer: halaman informasi, dibuka dari Dashboard
+// 08 Profil Developer: halaman informasi, dibuka dari tab Akun
 class ProfilDeveloperActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfilDeveloperBinding

@@ -5,13 +5,13 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ramkeripik.BaseActivity
 import com.example.ramkeripik.auth.LoginActivity
-import com.example.ramkeripik.dashboard.DashboardActivity
 import com.example.ramkeripik.data.SessionManager
 import com.example.ramkeripik.databinding.ActivitySplashBinding
 
 // Halaman pertama (LAUNCHER). Tampil 2 detik, lalu memilih tujuan:
-// sudah login -> DashboardActivity, belum login -> LoginActivity
+// sudah login -> BaseActivity (Bottom Navigation), belum login -> LoginActivity
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding
@@ -29,7 +29,7 @@ class SplashActivity : AppCompatActivity() {
     private fun tentukanHalamanTujuan() {
         val session = SessionManager(this)
         val tujuan = if (session.isLogin()) {
-            DashboardActivity::class.java
+            BaseActivity::class.java
         } else {
             LoginActivity::class.java
         }
