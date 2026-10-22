@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tab Akun: info pengguna yang sedang login, Profil Developer, dan Keluar -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sistra_bg"
+    tools:context=".akun.AkunFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/sistra_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextAppearance="@style/TextAppearance.Sistra.ToolbarTitle"
+        app:titleTextColor="@color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- ===== Header hijau: inisial + nama + email login ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/sistra_green"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="28dp">
+
+                <TextView
+                    android:id="@+id/tvInisialAkun"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/bg_lingkaran_putih"
+                    android:fontFamily="@font/rubik_semibold"
+                    android:gravity="center"
+                    android:text="@string/dashboard_inisial"
+                    android:textColor="@color/sistra_green"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvNamaAkun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/rubik_semibold"
+                    android:text="@string/akun_nama"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvEmailAkun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    tools:text="darwin@sistra.id" />
+            </LinearLayout>
+
+            <!-- ===== Kartu info akun ===== -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/sistra_border"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        style="@style/Sistra.ProfilJudulKartu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="@string/akun_kartu_info" />
+
+                    <TextView
+                        style="@style/Sistra.ProfilLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/akun_label_peran" />
+
+                    <TextView
+                        style="@style/Sistra.ProfilNilai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="@string/akun_peran" />
+
+                    <TextView
+                        style="@style/Sistra.ProfilLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/akun_label_kebun" />
+
+                    <TextView
+                        style="@style/Sistra.ProfilNilai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/akun_kebun" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Tombol ke Profil Developer (pindahan dari Dashboard) ===== -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfilDeveloper"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/rubik_medium"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/dashboard_tombol_profil"
+                android:textAllCaps="false"
+                android:textColor="@color/sistra_green"
+                android:textSize="16sp"
+                app:cornerRadius="6dp"
+                app:strokeColor="@color/sistra_green" />
+
+            <!-- ===== Tombol Keluar (hapus sesi login, pindahan dari Dashboard) ===== -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKeluar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/rubik_medium"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/dashboard_tombol_keluar"
+                android:textAllCaps="false"
+                android:textColor="@color/sistra_red"
+                android:textSize="16sp"
+                app:cornerRadius="6dp"
+                app:strokeColor="@color/sistra_red" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

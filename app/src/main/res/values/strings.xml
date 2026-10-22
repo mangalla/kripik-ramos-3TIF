@@ -33,6 +33,15 @@
     <string name="daftar_tombol_daftar">Daftar</string>
     <string name="daftar_berhasil">Akun berhasil dibuat</string>
 
+    <!-- Tab Akun -->
+    <string name="akun_judul">Akun</string>
+    <string name="akun_nama">Pak Darwin</string>
+    <string name="akun_kartu_info">Info Akun</string>
+    <string name="akun_label_peran">Peran</string>
+    <string name="akun_peran">Pekebun plasma</string>
+    <string name="akun_label_kebun">Kebun terdaftar</string>
+    <string name="akun_kebun">2 kebun · umur 12 th dan 8 th</string>
+
     <!-- 03 Beranda (Dashboard) -->
     <string name="dashboard_sapaan">Halo, Pak Darwin!</string>
     <string name="dashboard_judul">Catat Panenmu Hari Ini</string>
