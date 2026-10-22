@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Server disbun.riau.go.id tidak mengirim sertifikat intermediate Sectigo secara lengkap.
+    Chrome bisa melengkapinya sendiri, tetapi WebView tidak, sehingga koneksi ditolak
+    (net_error -202 / ERR_CERT_AUTHORITY_INVALID) dan halaman tampil putih kosong.
+    Solusinya: intermediate tersebut disertakan di aplikasi KHUSUS untuk domain ini,
+    sementara pengecekan SSL tetap berjalan normal.
+-->
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="true">disbun.riau.go.id</domain>
+        <trust-anchors>
+            <!-- Sectigo RSA Domain Validation Secure Server CA (berlaku s.d. 31 Des 2030) -->
+            <certificates src="@raw/disbun_intermediate" />
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
