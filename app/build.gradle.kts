@@ -11,7 +11,9 @@ android {
     defaultConfig {
         applicationId = "com.example.ramkeripik"
         minSdk = 24
-        targetSdk = 37
+        // 36, bukan 37: target 37 (Android 17) memblokir akses "local network" secara default,
+        // yang membuat WebView error net::ERR_ACCESS_DENIED di emulator
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
