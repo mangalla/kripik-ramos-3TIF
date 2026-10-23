@@ -13,25 +13,48 @@
     <!-- 01 Login -->
     <string name="login_judul">Selamat datang</string>
     <string name="login_deskripsi">Masuk untuk mencatat panen, menyimpan nota jual, dan melihat harga TBS Disbun Riau.</string>
-    <string name="login_hint_email">Email</string>
+    <string name="login_hint_username">Username</string>
     <string name="login_hint_password">Password</string>
     <string name="login_tombol_masuk">Masuk</string>
     <string name="login_lupa_password">Lupa password</string>
     <string name="login_ke_daftar">Belum punya akun? Daftar</string>
-    <string name="login_wajib_diisi">Email dan password wajib diisi</string>
-    <string name="login_salah">Email atau password salah</string>
-    <!-- Akun demo statis (belum ada database) -->
-    <string name="login_demo_email" translatable="false">darwin@sistra.id</string>
-    <string name="login_demo_password" translatable="false">sawit123</string>
+    <string name="login_wajib_diisi">Username dan password wajib diisi.</string>
+    <string name="login_salah">Username atau password salah.</string>
+    <string name="login_gagal_judul">Login Gagal</string>
+    <string name="tombol_ok">OK</string>
 
-    <!-- 02 Daftar Akun -->
+    <!-- 01a Register With Gmail -->
+    <string name="gmail_judul">Register With Gmail</string>
+    <string name="gmail_judul_halaman">Daftar dengan Gmail</string>
+    <string name="gmail_deskripsi">Masukkan alamat Gmail kamu untuk melanjutkan registrasi.</string>
+    <string name="gmail_hint_email">nama@gmail.com</string>
+    <string name="gmail_tombol_lanjut">Lanjutkan</string>
+    <string name="gmail_ikon_deskripsi">Ikon email</string>
+    <string name="gmail_error_judul">Email Tidak Valid</string>
+    <string name="gmail_error_kosong">Email tidak boleh kosong.</string>
+    <string name="gmail_error_domain">Email harus menggunakan domain @gmail.com.</string>
+    <string name="gmail_error_format">Format email tidak valid. Contoh: nama@gmail.com</string>
+
+    <!-- 02 Daftar Akun / Registrasi -->
     <string name="daftar_judul">Daftar Akun</string>
     <string name="daftar_hint_nama">Nama lengkap</string>
     <string name="daftar_hint_email">Email</string>
-    <string name="daftar_hint_no_hp">Nomor HP</string>
-    <string name="daftar_hint_password">Password</string>
+    <string name="daftar_hint_username">Username (tanpa spasi)</string>
+    <string name="daftar_hint_password">Password (minimal 6 karakter)</string>
     <string name="daftar_tombol_daftar">Daftar</string>
-    <string name="daftar_berhasil">Akun berhasil dibuat</string>
+    <string name="daftar_error_nama_kosong">Nama wajib diisi</string>
+    <string name="daftar_error_username_kosong">Username wajib diisi</string>
+    <string name="daftar_error_password_kosong">Password wajib diisi</string>
+    <string name="daftar_error_username_spasi">Username tidak boleh mengandung spasi</string>
+    <string name="daftar_error_password_pendek">Password minimal 6 karakter</string>
+
+    <!-- 02a Registrasi Berhasil -->
+    <string name="registrasi_berhasil_judul">Registrasi Berhasil</string>
+    <string name="registrasi_berhasil_deskripsi">Akun kamu sudah tersimpan. Silakan masuk dengan username dan password yang baru didaftarkan.</string>
+    <string name="registrasi_label_nama">Nama</string>
+    <string name="registrasi_label_email">Email</string>
+    <string name="registrasi_label_username">Username</string>
+    <string name="registrasi_tombol_login">Kembali ke Login</string>
 
     <!-- Bottom Navigation (Pertemuan 7) -->
     <string name="nav_beranda">Beranda</string>
@@ -40,8 +63,8 @@
 
     <!-- Tab Akun -->
     <string name="akun_judul">Akun</string>
-    <string name="akun_nama">Pak Darwin</string>
     <string name="akun_kartu_info">Info Akun</string>
+    <string name="akun_label_username">Username</string>
     <string name="akun_label_peran">Peran</string>
     <string name="akun_peran">Pekebun plasma</string>
     <string name="akun_label_kebun">Kebun terdaftar</string>

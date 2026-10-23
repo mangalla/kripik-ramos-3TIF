@@ -13,7 +13,7 @@ import com.example.ramkeripik.data.SessionManager
 import com.example.ramkeripik.databinding.FragmentAkunBinding
 import com.example.ramkeripik.profil.ProfilDeveloperActivity
 
-// Tab Akun: email yang sedang login, tombol Profil Developer, dan tombol Keluar
+// Tab Akun: data user yang sedang login, tombol Profil Developer, dan tombol Keluar
 class AkunFragment : Fragment() {
 
     private var _binding: FragmentAkunBinding? = null
@@ -35,14 +35,32 @@ class AkunFragment : Fragment() {
             title = getString(R.string.akun_judul)
         }
 
-        // Email diambil dari SharedPreferences yang disimpan saat login
-        binding.tvEmailAkun.text = SessionManager(requireContext()).ambilEmail()
+        // Data user diambil dari SharedPreferences yang disimpan saat login.
+        // Login lewat kondisi username == password tidak punya nama/email -> pakai username.
+        val session = SessionManager(requireContext())
+        val username = session.ambilUsername().orEmpty()
+        val nama = session.ambilNama() ?: username
+        binding.tvNamaAkun.text = nama
+        binding.tvEmailAkun.text = session.ambilEmail() ?: "@$username"
+        binding.tvInisialAkun.text = buatInisial(nama)
+        binding.tvUsernameAkun.text = username
 
         binding.btnProfilDeveloper.setOnClickListener {
             startActivity(Intent(requireContext(), ProfilDeveloperActivity::class.java))
         }
 
         binding.btnKeluar.setOnClickListener { keluar() }
+    }
+
+    // "Ramos Hutahaean" -> "RH", "ramos" -> "RA"
+    private fun buatInisial(nama: String): String {
+        val kata = nama.trim().split(Regex("\\s+")).filter { it.isNotEmpty() }
+        val inisial = when {
+            kata.isEmpty() -> "?"
+            kata.size == 1 -> kata[0].take(2)
+            else -> "${kata[0].first()}${kata[1].first()}"
+        }
+        return inisial.uppercase()
     }
 
     // Hapus sesi di SharedPreferences, lalu kembali ke Login dengan back stack bersih

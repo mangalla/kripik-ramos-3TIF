@@ -51,9 +51,9 @@
                     android:background="@drawable/bg_lingkaran_putih"
                     android:fontFamily="@font/rubik_semibold"
                     android:gravity="center"
-                    android:text="@string/dashboard_inisial"
                     android:textColor="@color/sistra_green"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    tools:text="RH" />
 
                 <TextView
                     android:id="@+id/tvNamaAkun"
@@ -61,9 +61,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:fontFamily="@font/rubik_semibold"
-                    android:text="@string/akun_nama"
                     android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    tools:text="Ramos Hutahaean" />
 
                 <TextView
                     android:id="@+id/tvEmailAkun"
@@ -73,7 +73,7 @@
                     android:fontFamily="@font/rubik_regular"
                     android:textColor="@color/white"
                     android:textSize="13sp"
-                    tools:text="darwin@sistra.id" />
+                    tools:text="ramos@gmail.com" />
             </LinearLayout>
 
             <!-- ===== Kartu info akun ===== -->
@@ -101,6 +101,20 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:text="@string/akun_kartu_info" />
+
+                    <TextView
+                        style="@style/Sistra.ProfilLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/akun_label_username" />
+
+                    <TextView
+                        android:id="@+id/tvUsernameAkun"
+                        style="@style/Sistra.ProfilNilai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        tools:text="ramos" />
 
                     <TextView
                         style="@style/Sistra.ProfilLabel"

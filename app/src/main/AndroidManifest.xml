@@ -31,8 +31,19 @@
             android:name=".auth.LoginActivity"
             android:exported="false" />
 
+        <!-- 01a Register With Gmail (Quiz Soal 1): input email saja -->
+        <activity
+            android:name=".auth.EmailGmailActivity"
+            android:exported="false" />
+
+        <!-- 02 Registrasi: email terbawa dari EmailGmailActivity -->
         <activity
             android:name=".auth.DaftarAkunActivity"
+            android:exported="false" />
+
+        <!-- 02a Halaman informasi "Registrasi Berhasil" -->
+        <activity
+            android:name=".auth.RegistrasiBerhasilActivity"
             android:exported="false" />
 
         <!-- Activity utama setelah login: Bottom Navigation + Fragment (Pertemuan 7) -->
