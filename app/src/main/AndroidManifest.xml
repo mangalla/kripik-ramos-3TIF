@@ -4,6 +4,7 @@
 
     <!-- Dibutuhkan WebDisbunActivity untuk memuat situs Disbun Riau -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -57,6 +58,11 @@
 
         <activity
             android:name=".profil.ProfilDeveloperActivity"
+            android:exported="false" />
+
+        <!-- Kebun Saya: data kebun disimpan di Room (sistra.db) -->
+        <activity
+            android:name=".kebun.KebunActivity"
             android:exported="false" />
 
         <!-- Latihan snack (tidak diubah, tetap memakai tema lama) -->

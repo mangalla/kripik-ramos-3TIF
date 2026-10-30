@@ -72,9 +72,8 @@
 
     <!-- 03 Beranda (Dashboard) -->
     <string name="beranda_judul">Beranda</string>
-    <string name="dashboard_sapaan">Halo, Pak Darwin!</string>
+    <string name="dashboard_sapaan">Halo, %1$s!</string>
     <string name="dashboard_judul">Catat Panenmu Hari Ini</string>
-    <string name="dashboard_inisial">DS</string>
     <string name="dashboard_menu_catat_panen">Catat Panen</string>
     <string name="dashboard_menu_riwayat">Riwayat</string>
     <string name="dashboard_menu_kebun">Kebun</string>
@@ -197,4 +196,30 @@
     <string name="nutrition_fiber_value">3 g</string>
     <string name="nutrition_sodium_label">Natrium</string>
     <string name="nutrition_sodium_value">380 mg</string>
+
+    <!-- Kebun Saya (Room database) -->
+    <string name="kebun_judul">Kebun Saya</string>
+    <string name="kebun_hint_nama">Nama kebun (mis. Kebun 1)</string>
+    <string name="kebun_hint_luas">Luas (ha), mis. 2 atau 1,5</string>
+    <string name="kebun_hint_tahun">Tahun tanam (mis. 2014)</string>
+    <string name="kebun_label_jenis">Jenis kebun</string>
+    <string name="kebun_plasma">Plasma</string>
+    <string name="kebun_swadaya">Swadaya</string>
+    <string name="kebun_tombol_simpan">Simpan Kebun</string>
+    <string name="kebun_label_daftar">Kebun terdaftar</string>
+    <string name="kebun_kosong">Belum ada kebun. Tambahkan kebun pertamamu di atas.</string>
+    <string name="kebun_error_nama">Nama kebun wajib diisi</string>
+    <string name="kebun_error_luas">Luas harus angka lebih dari 0</string>
+    <string name="kebun_error_tahun">Tahun tanam tidak valid</string>
+    <string name="kebun_tersimpan">Kebun tersimpan</string>
+    <string name="kebun_label_umur">umur</string>
+    <string name="kebun_item_detail">%1$s ha · tanam %2$d</string>
+    <string name="kebun_item_umur">%1$d th</string>
+    <string name="kebun_petunjuk_hapus">Tekan lama kartu untuk menghapus kebun</string>
+    <string name="kebun_hapus_judul">Hapus Kebun</string>
+    <string name="kebun_hapus_pesan">Hapus \"%1$s\" dari daftar kebun? Data yang dihapus tidak bisa dikembalikan.</string>
+    <string name="kebun_tombol_hapus">Hapus</string>
+    <string name="kebun_tombol_batal">Batal</string>
+    <string name="kebun_terhapus">Kebun dihapus</string>
+    <string name="akun_kebun_kosong">Belum ada kebun</string>
 </resources>

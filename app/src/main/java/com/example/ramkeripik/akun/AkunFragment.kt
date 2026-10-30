@@ -7,11 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.example.ramkeripik.R
 import com.example.ramkeripik.auth.LoginActivity
 import com.example.ramkeripik.data.SessionManager
+import com.example.ramkeripik.data.SistraDatabase
 import com.example.ramkeripik.databinding.FragmentAkunBinding
 import com.example.ramkeripik.profil.ProfilDeveloperActivity
+import kotlinx.coroutines.launch
 
 // Tab Akun: data user yang sedang login, tombol Profil Developer, dan tombol Keluar
 class AkunFragment : Fragment() {
@@ -39,28 +42,28 @@ class AkunFragment : Fragment() {
         // Login lewat kondisi username == password tidak punya nama/email -> pakai username.
         val session = SessionManager(requireContext())
         val username = session.ambilUsername().orEmpty()
-        val nama = session.ambilNama() ?: username
+        val nama = session.ambilNamaTampilan()
         binding.tvNamaAkun.text = nama
         binding.tvEmailAkun.text = session.ambilEmail() ?: "@$username"
-        binding.tvInisialAkun.text = buatInisial(nama)
+        binding.tvInisialAkun.text = session.ambilInisial()
         binding.tvUsernameAkun.text = username
+
+        // "Kebun terdaftar" diambil dari Room, bukan dari strings.xml lagi.
+        // viewLifecycleOwner: coroutine otomatis berhenti saat pindah tab (binding sudah null)
+        viewLifecycleOwner.lifecycleScope.launch {
+            val daftar = SistraDatabase.getInstance(requireContext()).kebunDao().ambilSemua(username)
+            binding.tvKebunAkun.text = if (daftar.isEmpty()) {
+                getString(R.string.akun_kebun_kosong)
+            } else {
+                "${daftar.size} kebun · umur " + daftar.joinToString(" dan ") { "${it.umur()} th" }
+            }
+        }
 
         binding.btnProfilDeveloper.setOnClickListener {
             startActivity(Intent(requireContext(), ProfilDeveloperActivity::class.java))
         }
 
         binding.btnKeluar.setOnClickListener { keluar() }
-    }
-
-    // "Ramos Hutahaean" -> "RH", "ramos" -> "RA"
-    private fun buatInisial(nama: String): String {
-        val kata = nama.trim().split(Regex("\\s+")).filter { it.isNotEmpty() }
-        val inisial = when {
-            kata.isEmpty() -> "?"
-            kata.size == 1 -> kata[0].take(2)
-            else -> "${kata[0].first()}${kata[1].first()}"
-        }
-        return inisial.uppercase()
     }
 
     // Hapus sesi di SharedPreferences, lalu kembali ke Login dengan back stack bersih

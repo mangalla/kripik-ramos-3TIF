@@ -115,6 +115,24 @@ yang berisi Bottom Navigation dan 3 Fragment: Beranda, Harga, Akun (Pertemuan 7)
 
 Catatan: `SessionManager.logout()` hanya menghapus `sistra_session`, jadi akun di `sistra_akun` tetap ada setelah Keluar.
 
+## Flow 9 — Kebun Saya: simpan & baca data dengan Room
+
+| Langkah | Lokasi | Yang terjadi |
+|---|---|---|
+| **A** | `HomeFragment` | Kartu **Kebun** → `startActivity(Intent(requireContext(), KebunActivity))` |
+| **B** | `KebunActivity.onCreate()` | `siapkanRecyclerView()`: `LinearLayoutManager` + `KebunAdapter` dipasang ke `rvKebun`, lalu `lifecycleScope.launch { muatDaftar() }` |
+| **C** | `SistraDatabase.getInstance()` | Singleton: `Room.databaseBuilder(..., "sistra.db").build()` hanya dibuat sekali |
+| **D** | `muatDaftar()` → `KebunDao.ambilSemua(pemilik)` | `SELECT * FROM kebun WHERE pemilik = :pemilik` (pemilik = username dari `SessionManager`) |
+| **E** | `muatDaftar()` → `KebunAdapter.perbaruiData()` | `List<Kebun>` dikirim ke Adapter → `notifyDataSetChanged()` → `onBindViewHolder()` mengisi tiap `item_kebun.xml`. Daftar kosong → `tvKebunKosong` tampil |
+| **F** | `btnSimpanKebun` → `simpanKebun()` | Validasi: nama wajib, luas > 0 (koma diubah jadi titik), tahun tanam 1970..tahun ini |
+| **G** | `simpanKebun()` → `KebunDao.tambah()` | `INSERT` di coroutine (`suspend`, Room menjalankannya di luar main thread) |
+| **H** | `simpanKebun()` | Form dikosongkan → Snackbar "Kebun tersimpan" → `muatDaftar()` lagi |
+| **H2** | Kartu ditekan lama → `KebunAdapter` memanggil `onTekanLama(kebun)` | `konfirmasiHapus()` → MaterialAlertDialog → **Hapus** → `KebunDao.hapus()` (`DELETE`) → `muatDaftar()` |
+| **I** | `AkunFragment.onViewCreated()` | `viewLifecycleOwner.lifecycleScope.launch` → `ambilSemua(username)` → `tvKebunAkun` = "2 kebun · umur 12 th dan 8 th" |
+
+Catatan: `SessionManager.logout()` tidak menyentuh `sistra.db`, jadi data kebun tetap ada setelah Keluar.
+Isi tabel bisa dilihat lewat **App Inspection → Database Inspector** di Android Studio.
+
 ## Peta file
 
 ```
@@ -131,4 +149,9 @@ harga/HargaFragment.kt            ← tab Harga TBS (isi lama HargaTbsActivity)
 akun/AkunFragment.kt              ← tab Akun: nama/email/username login, Profil Developer, Keluar
 profil/ProfilDeveloperActivity.kt ← halaman profil developer
 web/WebDisbunActivity.kt          ← WebView situs Disbun Riau
+data/Kebun.kt                     ← Room @Entity tabel "kebun"
+data/KebunDao.kt                  ← Room @Dao: tambah, ambilSemua, hapus
+data/SistraDatabase.kt            ← Room @Database "sistra.db" (singleton)
+kebun/KebunActivity.kt            ← Kebun Saya: form tambah kebun + RecyclerView daftar kebun + hapus
+kebun/KebunAdapter.kt             ← Adapter + ViewHolder RecyclerView (layout item_kebun.xml)
 ```

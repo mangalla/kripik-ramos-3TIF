@@ -31,6 +31,24 @@ class SessionManager(context: Context) {
 
     fun ambilEmail(): String? = prefs.getString(KEY_EMAIL, null)
 
+    // Nama lengkap dari registrasi; login lewat username == password tidak punya nama -> pakai username
+    fun ambilNamaTampilan(): String = ambilNama() ?: ambilUsername().orEmpty()
+
+    // Kata pertama nama, huruf awal kapital: "Ramos Hutahaean" -> "Ramos", "darwin" -> "Darwin"
+    fun ambilNamaPanggilan(): String =
+        ambilNamaTampilan().trim().split(Regex("\\s+")).first().replaceFirstChar { it.uppercase() }
+
+    // "Ramos Hutahaean" -> "RH", "ramos" -> "RA" (avatar bulat di Beranda & Akun)
+    fun ambilInisial(): String {
+        val kata = ambilNamaTampilan().trim().split(Regex("\\s+")).filter { it.isNotEmpty() }
+        val inisial = when {
+            kata.isEmpty() -> "?"
+            kata.size == 1 -> kata[0].take(2)
+            else -> "${kata[0].first()}${kata[1].first()}"
+        }
+        return inisial.uppercase()
+    }
+
     // Dipanggil tombol Keluar di tab Akun (data registrasi di AkunManager tidak ikut terhapus)
     fun logout() {
         prefs.edit().clear().apply()

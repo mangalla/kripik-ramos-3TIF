@@ -9,7 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.ramkeripik.BaseActivity
 import com.example.ramkeripik.R
+import com.example.ramkeripik.data.SessionManager
 import com.example.ramkeripik.databinding.FragmentHomeBinding
+import com.example.ramkeripik.kebun.KebunActivity
 import com.example.ramkeripik.web.WebDisbunActivity
 import com.google.android.material.snackbar.Snackbar
 
@@ -36,11 +38,20 @@ class HomeFragment : Fragment() {
             title = getString(R.string.beranda_judul)
         }
 
+        // Sapaan & inisial mengikuti user yang sedang login (bukan teks tetap "Pak Darwin")
+        val session = SessionManager(requireContext())
+        binding.tvSapaan.text = getString(R.string.dashboard_sapaan, session.ambilNamaPanggilan())
+        binding.tvInisial.text = session.ambilInisial()
+
         // Menu yang halamannya belum dibuat
         binding.cardCatatPanen.setOnClickListener { tampilkanSegeraHadir() }
         binding.cardRiwayat.setOnClickListener { tampilkanSegeraHadir() }
-        binding.cardKebun.setOnClickListener { tampilkanSegeraHadir() }
         binding.cardRekap.setOnClickListener { tampilkanSegeraHadir() }
+
+        // Kebun Saya: data kebun disimpan di Room
+        binding.cardKebun.setOnClickListener {
+            startActivity(Intent(requireContext(), KebunActivity::class.java))
+        }
 
         // "Lihat semua" sekarang pindah ke tab Harga, bukan membuka Activity baru
         binding.tvLihatSemuaHarga.setOnClickListener {

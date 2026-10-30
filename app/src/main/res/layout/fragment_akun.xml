@@ -135,7 +135,9 @@
                         android:layout_height="wrap_content"
                         android:text="@string/akun_label_kebun" />
 
+                    <!-- Diisi AkunFragment dari Room (tabel kebun) -->
                     <TextView
+                        android:id="@+id/tvKebunAkun"
                         style="@style/Sistra.ProfilNilai"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
